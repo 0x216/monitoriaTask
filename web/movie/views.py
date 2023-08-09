@@ -16,6 +16,7 @@ def generate_cache_key(base, query):
 # in that case we just use simple caching for 1 minute 
 # In prodction i would do caching using Redis as example 
 # Also PostgreSQL can provide caching for us, but in that case we using just Sqlite due to task requirements
+# In production we also must implement pagination but it's not required by task
 def search_view(request):
     query = request.GET.get('query', '')
 
