@@ -1,0 +1,7 @@
+<h1>{{ movie.title }}</h1>
+<h3>Actors:</h3>
+<ul>
+{% for actor in movie.actors.all %}
+    <li><a href="{% url 'actor_detail' actor.id %}">{{ actor.name }}</a></li>
+{% endfor %}
+</ul>
