@@ -70,10 +70,6 @@ class CsfdScraper:
         print(f"Failed to fetch movie links after {max_retries} retries.")
         return []
 
-
-
-
-
     async def extract_film_info(self, link):
         max_retries = 5 
         retry_delay = 3  # initial delay
