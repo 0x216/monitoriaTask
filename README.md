@@ -14,7 +14,7 @@ A Django application for searching movies and actors from the ČSFD database of 
 
 ## Getting Started
 
-Follow these steps to get the project up and running on your local machine
+Follow these steps to get the project up and running on your local machine.
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ Follow these steps to get the project up and running on your local machine
     pip install virtualenv
     ```
 
-    Now, create and activate the virtual environment:
+    Create and activate the virtual environment:
 
     ```bash
     virtualenv venv
@@ -53,15 +53,24 @@ Follow these steps to get the project up and running on your local machine
     pip install -r requirements.txt
     ```
 
-4. **Scrape Data from ČSFD**
+4. **Database Setup**
 
-    Populate the SQLite database by running:
+    Set up the SQLite database by running migrations:
+
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+
+5. **Scrape Data from ČSFD**
+
+    Populate the SQLite database with data:
 
     ```bash
     python manage.py csfd_scrapper
     ```
 
-5. **Run the Django Server**
+6. **Run the Django Server**
 
     ```bash
     python manage.py runserver
@@ -73,5 +82,7 @@ Once the server is up:
 
 1. Open your browser.
 2. Navigate to [http://127.0.0.1:8000/search](http://127.0.0.1:8000/search).
-3. Start searching for movies or actors
+3. Start searching for movies or actors!
+
+---
 
